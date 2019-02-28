@@ -58,7 +58,6 @@ end
 def checkout(cart, coupons)
   if coupons.empty?
     consolidated = consolidate_cart(cart)
-    binding.pry
     last_cart = apply_clearance(apply_coupons(consolidated, coupons))
     total = 0
     last_cart.each {|key, value|
