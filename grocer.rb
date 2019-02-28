@@ -56,7 +56,6 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  if coupons.empty?
     consolidated = consolidate_cart(cart)
     last_cart = apply_clearance(apply_coupons(consolidated, coupons))
     total = 0
@@ -65,7 +64,5 @@ def checkout(cart, coupons)
         total = total + value[:price]
       }
     }
-  
-  end
   total
 end
