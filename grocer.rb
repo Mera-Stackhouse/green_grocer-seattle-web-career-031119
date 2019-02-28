@@ -60,12 +60,10 @@ def checkout(cart, coupons)
     consolidated = consolidate_cart(cart)
     
     last_cart = apply_clearance(apply_coupons(consolidated, coupons))
-    binding.pry
     total = 0
     last_cart.each {|key, value|
-      value.each {|key, value|
-        total = total + value[:price]
-      }
+      total = total + value[:price]
+      binding.pry
     }
   
   end
