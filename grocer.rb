@@ -65,7 +65,6 @@ def checkout(cart, coupons)
       total = total + value[:price]
     }
   end
-  total
   if total > 100
     total = (total * 0.9).round(2)
   end
