@@ -62,7 +62,9 @@ def checkout(cart, coupons)
     last_cart = apply_clearance(applied)
     total = 0
     last_cart.each {|key, value|
-      total = total + value[:price]
+      if value[:count] > 0
+        total = total + value[:price]
+      end
     }
     binding.pry
   if total > 100
