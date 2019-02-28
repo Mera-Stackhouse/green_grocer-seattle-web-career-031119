@@ -65,6 +65,7 @@ def checkout(cart, coupons)
       value.each {|key, value|
         total = total + value[:price]
         binding.pry
+      }
     }
   
   end
