@@ -56,7 +56,7 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  if coupons.empty?
+   coupons.empty?
     consolidated = consolidate_cart(cart)
     applied = apply_coupons(consolidated, coupons)
     last_cart = apply_clearance(applied)
@@ -64,7 +64,6 @@ def checkout(cart, coupons)
     last_cart.each {|key, value|
       total = total + value[:price]
     }
-  end
   if total > 100
     total = (total * 0.9).round(2)
   end
