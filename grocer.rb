@@ -64,6 +64,7 @@ def checkout(cart, coupons)
     last_cart.each {|key, value|
       total = total + value[:price]
     }
+    binding.pry
   if total > 100
     total = (total * 0.9).round(2)
   end
