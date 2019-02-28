@@ -58,8 +58,8 @@ end
 def checkout(cart, coupons)
   if coupons.empty?
     consolidated = consolidate_cart(cart)
-    
-    last_cart = apply_coupons(consolidated, coupons)
+    applied = apply_coupons(consolidated, coupons)
+    last_cart = apply_clearance(applied)
     total = 0
     last_cart.each {|key, value|
       total = total + value[:price]
