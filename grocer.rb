@@ -63,7 +63,6 @@ def checkout(cart, coupons)
     total = 0
     last_cart.each {|key, value|
       total = total + value[:price]
-      binding.pry
     }
   end
   total
