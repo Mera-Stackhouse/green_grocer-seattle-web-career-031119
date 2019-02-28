@@ -62,7 +62,7 @@ def checkout(cart, coupons)
   total = 0
   last_cart.each {|key, value|
     if value[:count] > 0
-      total = total + (value[:price] * value[:count]
+      total = total + (value[:price] * value[:count])
     end
   }
   if total > 100
